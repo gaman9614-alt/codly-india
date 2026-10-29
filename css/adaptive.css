@@ -1,4 +1,7 @@
 /* Layout adapts to available space, touch input and short landscape screens. */
+.whatsapp-float{position:fixed;right:24px;bottom:max(24px,env(safe-area-inset-bottom));z-index:30;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:13px 20px;border:2px solid #fff;border-radius:30px;background:#176b3b;color:#fff;font-size:15px;font-weight:700;line-height:1.5;box-shadow:0 4px 18px #173b2a40;max-width:calc(100% - 32px)}
+.whatsapp-float svg{width:25px;height:25px;flex-shrink:0}.whatsapp-float:hover{background:#10542d}.whatsapp-float:focus-visible{outline:3px solid #125fa6;outline-offset:4px}.dialog-open .whatsapp-float{visibility:hidden}.site-footer{padding-bottom:max(100px,calc(env(safe-area-inset-bottom) + 84px))!important}
+@media(max-width:600px){.whatsapp-float{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));min-height:52px;padding:11px 17px;font-size:14px}.whatsapp-float .whatsapp-desktop{display:none}}
 :root{--header-height:90px;--page-gutter:clamp(20px,4vw,48px)}
 html{scroll-padding-top:calc(var(--header-height) + 20px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .wrap{width:min(1220px,calc(100% - var(--page-gutter)*2));margin-inline:auto}
