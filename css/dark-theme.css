@@ -30,6 +30,12 @@ body {
   color: #f1f5f9 !important;
 }
 
+main,
+section,
+.section {
+  background-color: transparent;
+}
+
 /* 1. Global Typography & Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
@@ -274,8 +280,30 @@ em {
 }
 
 /* 8. Selected Work & Project Grid */
-.project-image {
-  background: #0a111c !important;
+.home-work,
+section.home-work,
+.section.home-work,
+#selected-work {
+  background: #060b13 !important;
+  background-color: #060b13 !important;
+  color: #f1f5f9 !important;
+}
+
+.home-work .section-heading h2,
+#selected-work h2 {
+  color: #ffffff !important;
+}
+
+.home-work .section-heading p,
+#selected-work p {
+  color: #94a3b8 !important;
+}
+
+.project-image,
+.project-image-0,
+.project-image-1,
+.human-home .project-image {
+  background: #0d1522 !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 14px !important;
 }
@@ -296,7 +324,9 @@ em {
 }
 
 /* 9. Together / Process Section */
-.together {
+.together,
+.section.together,
+section.together {
   background: #080d16 !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 20px !important;
@@ -337,7 +367,31 @@ em {
 }
 
 /* 10. FAQ Section */
+.home-questions,
+section.home-questions,
+.section.home-questions {
+  background: #060b13 !important;
+  background-color: #060b13 !important;
+  color: #f1f5f9 !important;
+}
+
+.home-questions .faq-section,
+.faq-section {
+  background: transparent !important;
+}
+
+.home-questions .section-heading h2,
+.faq-section h2 {
+  color: #ffffff !important;
+}
+
+.home-questions .section-heading p,
+.faq-section p {
+  color: #94a3b8 !important;
+}
+
 .faq-list details {
+  background: transparent !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -347,6 +401,7 @@ em {
 
 .faq-list summary {
   color: #ffffff !important;
+  font-weight: 500 !important;
 }
 
 .faq-list summary span {
@@ -573,3 +628,4 @@ dialog#project-dialog {
 ::-webkit-scrollbar-thumb:hover {
   background: #334155;
 }
+
