@@ -1,14 +1,18 @@
-# Codly India static website
+# Codly India
 
-Upload the contents of this folder to a GitHub repository on the `main` branch.
-In Settings > Pages, set Source to **GitHub Actions**. Run or re-run the
-Publish GitHub Pages workflow. Its deployment result provides the live URL:
-`https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
+Live website: https://gaman9614-alt.github.io/codly-india/
 
-This export contains public HTML and visual assets only. It does not include
-PHP, credentials, SQL, uploaded client documents, or account data. Contact and
-quote requests use direct WhatsApp and telephone links. Logins, payments,
-database content, appointment booking, and server forms are unavailable.
-Existing fallback marketing content is retained; review claims before launch.
+A responsive, static website with 16 pages. The shared frontend is in
+`css/studio.css` and `js/studio.js`; it uses local assets and system fonts,
+with no framework, CDN, dependency installation or build required.
 
-Tailwind, Google Fonts, and external icons require an internet connection.
+Push changes to `main` to publish through the Publish GitHub Pages workflow.
+The repository's Pages source must be set to GitHub Actions.
+
+The project gallery supports category filters and accessible project dialogs.
+Pricing supports monthly and annual retainer views. The contact brief opens
+a WhatsApp draft for the visitor to review and send; it does not submit to a
+server. Email and telephone contact links are also available.
+
+This repository contains the public frontend only. Server applications,
+credentials, databases, client documents and account data are excluded.

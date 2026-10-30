@@ -1,0 +1,329 @@
+/* ============================================================
+   CO D L Y   I N D I A  —  Cinematic Scroll Hero (Apple Style)
+   Isolated styles for Section 1 canvas sequence and headlines
+   ============================================================ */
+
+/* 1. Main Scroll Track (approx 400vh scroll runway) */
+.cinematic-hero {
+  position: relative;
+  width: 100%;
+  height: 400vh;
+  background-color: #060b13;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+/* 2. Full-Screen Sticky Viewport */
+.cinematic-hero__pin {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #060b13;
+  z-index: 5;
+}
+
+/* 3. HTML5 Canvas displaying 1920x1080 image sequence */
+.cinematic-hero__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 4. Cinematic Vignette & Ambient Radial Shading */
+.cinematic-hero__vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(6, 11, 19, 0.18) 0%, rgba(6, 11, 19, 0.72) 80%, rgba(6, 11, 19, 0.95) 100%),
+    linear-gradient(180deg, rgba(6, 11, 19, 0.65) 0%, transparent 18%, transparent 80%, rgba(6, 11, 19, 0.92) 100%);
+}
+
+/* 5. Subtle Soft Ambient Glow behind text */
+.cinematic-hero__ambient {
+  position: absolute;
+  width: min(850px, 90vw);
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(32, 102, 79, 0.22) 0%, rgba(56, 189, 248, 0.08) 50%, transparent 75%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 6. Typography Stage Container */
+.cinematic-hero__stage {
+  position: relative;
+  z-index: 3;
+  width: min(1200px, calc(100% - 48px));
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* 7. Shared Scene Styles */
+.cinematic-hero__scene {
+  position: absolute;
+  width: 100%;
+  max-width: 980px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  will-change: opacity, transform;
+  pointer-events: none;
+  transition: opacity 0.08s ease-out, transform 0.08s ease-out;
+}
+
+/* 8. Eyebrow Tag / Status */
+.cinematic-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9fe3cf;
+  margin: 0 0 26px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cinematic-hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px #34d399;
+  animation: hero-dot-glow 2.4s infinite ease-in-out;
+}
+
+@keyframes hero-dot-glow {
+  0%, 100% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 16px #34d399; }
+}
+
+/* 9. Apple-Style Hero Display Headlines */
+.cinematic-hero__title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2.5rem, 6.4vw, 5.4rem);
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+.cinematic-hero__title em,
+.cinematic-hero__title .highlight {
+  font-style: normal;
+  background: linear-gradient(135deg, #ffffff 20%, #a7f3d0 60%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle for Scene 2 */
+.cinematic-hero__subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 600px;
+  margin: 22px auto 0;
+  font-weight: 400;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* 10. Apple Scroll Indicator Pill */
+.cinematic-hero__scroll-indicator {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 4;
+  color: rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.cinematic-hero__scroll-indicator.is-hidden {
+  opacity: 0;
+  transform: translate(-50%, 15px);
+}
+
+.cinematic-hero__scroll-text {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.cinematic-hero__scroll-pill {
+  width: 22px;
+  height: 36px;
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.cinematic-hero__scroll-pill::after {
+  content: "";
+  width: 3px;
+  height: 8px;
+  background: #34d399;
+  border-radius: 2px;
+  animation: hero-scroll-bob 2.2s infinite ease-in-out;
+}
+
+@keyframes hero-scroll-bob {
+  0% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(9px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.4; }
+}
+
+/* 11. Exit blend gradient transitioning to next section */
+.cinematic-hero__bottom-blend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(6, 11, 19, 0) 0%, rgba(250, 249, 245, 0.8) 75%, var(--paper, #faf9f5) 100%);
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+}
+
+/* 12. Dynamic Navbar Integration over Dark Hero */
+.site-header.is-over-hero {
+  background: rgba(6, 11, 19, 0.72) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.site-header.is-over-hero .nav-wrap nav a {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.site-header.is-over-hero .nav-wrap nav a:hover,
+.site-header.is-over-hero .nav-wrap nav a[aria-current] {
+  color: #ffffff !important;
+}
+
+.site-header.is-over-hero .nav-wrap nav a[aria-current]::after {
+  background: #34d399 !important;
+}
+
+.site-header.is-over-hero .menu-toggle {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.site-header.is-over-hero .menu-toggle span {
+  background: #ffffff !important;
+}
+
+/* 13. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .cinematic-hero {
+    height: 350vh; /* comfortable scroll distance on touch devices */
+  }
+
+  .cinematic-hero__title {
+    font-size: clamp(2.1rem, 8.8vw, 3.4rem);
+    letter-spacing: -0.035em;
+    padding: 0 4px;
+  }
+
+  .cinematic-hero__eyebrow {
+    font-size: 9.5px;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.16em;
+  }
+
+  .cinematic-hero__subtitle {
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 0 10px;
+  }
+
+  .cinematic-hero__scroll-indicator {
+    bottom: 26px;
+  }
+}
+
+/* 14. Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-hero {
+    height: auto !important;
+  }
+
+  .cinematic-hero__pin {
+    position: relative !important;
+    height: 85vh !important;
+    height: 85dvh !important;
+  }
+
+  .cinematic-hero__scene.scene-1 {
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative !important;
+  }
+
+  .cinematic-hero__scene.scene-2 {
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative !important;
+    margin-top: 40px;
+  }
+
+  .cinematic-hero__scroll-indicator {
+    display: none !important;
+  }
+
+  .cinematic-hero__bottom-blend {
+    display: none !important;
+  }
+}
