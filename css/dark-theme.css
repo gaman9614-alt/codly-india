@@ -1,0 +1,575 @@
+/* ============================================================
+   CO D L Y   I N D I A  —  Cinematic Dark / Black Theme
+   Apple-grade deep obsidian & glass styling for the full website
+   ============================================================ */
+
+:root,
+.human-home,
+body {
+  --paper: #060b13 !important;
+  --white: #0d1522 !important;
+  --ink: #f1f5f9 !important;
+  --muted: #94a3b8 !important;
+  --green: #34d399 !important;
+  --mint: #112922 !important;
+  --line: rgba(255, 255, 255, 0.1) !important;
+  --orange: #fbbf24 !important;
+  --radius: 12px;
+  background-color: #060b13 !important;
+  color: #f1f5f9 !important;
+  color-scheme: dark !important;
+}
+
+html {
+  background-color: #060b13 !important;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #060b13 !important;
+  color: #f1f5f9 !important;
+}
+
+/* 1. Global Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+  letter-spacing: -0.035em;
+}
+
+p {
+  color: #94a3b8;
+}
+
+p.lead {
+  color: #cbd5e1 !important;
+}
+
+em {
+  font-style: normal;
+  color: #34d399 !important;
+  background: linear-gradient(135deg, #ffffff 15%, #a7f3d0 60%, #38bdf8 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.eyebrow {
+  color: #34d399 !important;
+  letter-spacing: 0.18em !important;
+  font-weight: 600 !important;
+}
+
+.status-dot {
+  background: #34d399 !important;
+  box-shadow: 0 0 8px #34d399 !important;
+}
+
+/* 2. Site Header & Navigation */
+.site-header {
+  background: rgba(6, 11, 19, 0.82) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrap nav a {
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-wrap nav a:hover,
+.nav-wrap nav a[aria-current] {
+  color: #ffffff !important;
+}
+
+.nav-wrap nav a[aria-current]::after {
+  background: #34d399 !important;
+  box-shadow: 0 0 8px #34d399;
+}
+
+.menu-toggle {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.menu-toggle span {
+  background: #ffffff !important;
+}
+
+@media (max-width: 900px) {
+  .nav-wrap nav {
+    background: #090f18 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7) !important;
+  }
+}
+
+/* 3. Buttons & CTAs */
+.button {
+  background: #143b2f !important;
+  border: 1px solid #20664f !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+.button:hover {
+  background: #1b5341 !important;
+  border-color: #34d399 !important;
+  box-shadow: 0 6px 20px rgba(52, 211, 153, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+.button-small.nav-cta {
+  background: rgba(52, 211, 153, 0.08) !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+  color: #34d399 !important;
+}
+
+.button-small.nav-cta:hover {
+  background: #34d399 !important;
+  color: #060b13 !important;
+  border-color: #34d399 !important;
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.35) !important;
+}
+
+.button-light {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #060b13 !important;
+  font-weight: 600 !important;
+}
+
+.button-light:hover {
+  background: #e2e8f0 !important;
+}
+
+.text-link {
+  color: #34d399 !important;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.35) !important;
+}
+
+.text-link:hover {
+  color: #6ee7b7 !important;
+  border-bottom-color: #34d399 !important;
+}
+
+/* 4. Smooth Transition from Cinematic Hero to Next Section */
+.cinematic-hero__bottom-blend {
+  background: linear-gradient(to bottom, rgba(6, 11, 19, 0) 0%, rgba(6, 11, 19, 0.75) 50%, #060b13 100%) !important;
+}
+
+/* 5. Hello Section & Work Canvas */
+.hello-description {
+  color: #94a3b8 !important;
+}
+
+.hello-reassurance {
+  color: #64748b !important;
+}
+
+.work-canvas {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+}
+
+.canvas-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #94a3b8 !important;
+}
+
+.canvas-number {
+  color: #34d399 !important;
+}
+
+.mini-browser {
+  background: #05080e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #94a3b8 !important;
+}
+
+.canvas-caption strong {
+  color: #ffffff !important;
+}
+
+.canvas-caption p {
+  color: #94a3b8 !important;
+}
+
+.canvas-caption a {
+  color: #34d399 !important;
+}
+
+.canvas-note {
+  background: #05080e !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #64748b !important;
+}
+
+.canvas-note b {
+  color: #94a3b8 !important;
+}
+
+/* 6. Strip Highlights */
+.hello-strip,
+.capability-strip {
+  background: #0a111c !important;
+  border-block: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.hello-strip .strip-label {
+  color: #34d399 !important;
+}
+
+.hello-strip span {
+  color: #cbd5e1 !important;
+}
+
+/* 7. Services / Help Grid Cards */
+.help-grid .help-card {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  transition: all 0.25s ease !important;
+}
+
+.help-grid .help-card:hover {
+  background: #0f1826 !important;
+  border-color: rgba(52, 211, 153, 0.35) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5) !important;
+}
+
+.help-card h3 {
+  color: #ffffff !important;
+}
+
+.help-card p {
+  color: #94a3b8 !important;
+}
+
+.help-icon {
+  color: #34d399 !important;
+}
+
+.help-category {
+  color: #34d399 !important;
+}
+
+.help-link {
+  color: #38bdf8 !important;
+}
+
+.help-footnote {
+  color: #64748b !important;
+}
+
+.help-footnote a {
+  color: #34d399 !important;
+}
+
+/* 8. Selected Work & Project Grid */
+.project-image {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+}
+
+.project-meta p {
+  color: #34d399 !important;
+  font-weight: 600;
+}
+
+.project-meta h3,
+.project-meta h3 button {
+  color: #ffffff !important;
+}
+
+.project-meta span,
+.project-meta>span {
+  color: #94a3b8 !important;
+}
+
+/* 9. Together / Process Section */
+.together {
+  background: #080d16 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: clamp(32px, 5vw, 60px) !important;
+}
+
+.together-intro p.lead {
+  color: #cbd5e1 !important;
+}
+
+.together-steps li {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.together-steps li span {
+  color: #34d399 !important;
+}
+
+.together-steps li h3 {
+  color: #ffffff !important;
+}
+
+.together-steps li p {
+  color: #94a3b8 !important;
+}
+
+.process-section {
+  background: #04080e !important;
+  border-block: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.process-num {
+  color: #34d399 !important;
+}
+
+.process-grid div {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 10. FAQ Section */
+.faq-list details {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.faq-list details:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.faq-list summary {
+  color: #ffffff !important;
+}
+
+.faq-list summary span {
+  color: #34d399 !important;
+}
+
+.faq-list details p {
+  color: #94a3b8 !important;
+}
+
+/* 11. Human CTA Section */
+.human-cta {
+  background: radial-gradient(ellipse at 50% 0%, #0d2235 0%, #060b13 75%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6) !important;
+}
+
+.human-cta h2 {
+  color: #ffffff !important;
+}
+
+.human-cta p {
+  color: #94a3b8 !important;
+}
+
+.cta-spark {
+  color: #34d399 !important;
+}
+
+.cta-email {
+  color: #38bdf8 !important;
+}
+
+.cta-email:hover {
+  color: #7dd3fc !important;
+}
+
+/* 12. Site Footer */
+.site-footer {
+  background: #04080e !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.footer-top h2 {
+  color: #ffffff !important;
+}
+
+.footer-top p,
+.footer-top>div>a:not(.footer-logo) {
+  color: #94a3b8 !important;
+}
+
+.footer-top a:hover {
+  color: #34d399 !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #64748b !important;
+}
+
+.footer-bottom a {
+  color: #94a3b8 !important;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff !important;
+}
+
+/* 13. Interior Pages: About, Services, Pricing, Contact, Legal */
+.page-hero {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-statement {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+}
+
+.about-statement h2 {
+  color: #ffffff !important;
+}
+
+.about-statement p {
+  color: #34d399 !important;
+}
+
+.simple-grid article {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  padding: 28px !important;
+}
+
+.simple-grid article h3 {
+  color: #ffffff !important;
+}
+
+.simple-grid article p {
+  color: #94a3b8 !important;
+}
+
+.price-card {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+}
+
+.price-card .price {
+  color: #ffffff !important;
+}
+
+.price-card li {
+  color: #94a3b8 !important;
+}
+
+.price-context {
+  background: #05080e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  color: #94a3b8 !important;
+}
+
+.billing-toggle {
+  background: #05080e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.billing-toggle button {
+  color: #94a3b8 !important;
+}
+
+.billing-toggle button.active {
+  background: #143b2f !important;
+  color: #34d399 !important;
+}
+
+.contact-layout {
+  color: #f1f5f9 !important;
+}
+
+.contact-form {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+}
+
+input, textarea, select {
+  background: #05080e !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #34d399 !important;
+  outline: 2px solid rgba(52, 211, 153, 0.25) !important;
+}
+
+.filter-bar .filter {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #94a3b8 !important;
+}
+
+.filter-bar .filter.active,
+.filter-bar .filter:hover {
+  background: #143b2f !important;
+  color: #34d399 !important;
+  border-color: #34d399 !important;
+}
+
+.legal-copy {
+  color: #cbd5e1 !important;
+}
+
+.legal-copy h2 {
+  color: #ffffff !important;
+}
+
+dialog#project-dialog {
+  background: #0a111c !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 20px !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dialog-close {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.dialog-copy h2 {
+  color: #ffffff !important;
+}
+
+.dialog-copy p {
+  color: #94a3b8 !important;
+}
+
+/* 14. Brand Logo Optimization for Dark Background */
+.brand img,
+.footer-logo img {
+  filter: brightness(1.2) contrast(1.1);
+}
+
+/* 15. Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060b13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
