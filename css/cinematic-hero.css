@@ -48,7 +48,7 @@
   inset: 0;
   pointer-events: none;
   z-index: 2;
-  background: 
+  background:
     radial-gradient(ellipse at 50% 50%, rgba(6, 11, 19, 0.18) 0%, rgba(6, 11, 19, 0.72) 80%, rgba(6, 11, 19, 0.95) 100%),
     linear-gradient(180deg, rgba(6, 11, 19, 0.65) 0%, transparent 18%, transparent 80%, rgba(6, 11, 19, 0.92) 100%);
 }
@@ -129,8 +129,18 @@
 }
 
 @keyframes hero-dot-glow {
-  0%, 100% { opacity: 0.6; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 16px #34d399; }
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 16px #34d399;
+  }
 }
 
 /* 9. Apple-Style Hero Display Headlines */
@@ -215,9 +225,20 @@
 }
 
 @keyframes hero-scroll-bob {
-  0% { transform: translateY(0); opacity: 0.4; }
-  50% { transform: translateY(9px); opacity: 1; }
-  100% { transform: translateY(0); opacity: 0.4; }
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(9px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
 }
 
 /* 11. Exit blend gradient transitioning to next section */
@@ -267,7 +288,8 @@
 /* 13. Mobile Responsiveness */
 @media (max-width: 768px) {
   .cinematic-hero {
-    height: 350vh; /* comfortable scroll distance on touch devices */
+    height: 350vh;
+    /* comfortable scroll distance on touch devices */
   }
 
   .cinematic-hero__title {
